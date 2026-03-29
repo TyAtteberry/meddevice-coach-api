@@ -453,7 +453,16 @@ app.post('/proxy/claude', authMiddleware, async (req, res) => {
   }
 });
 
-app.post('/proxy/elevenlabs/:voiceId', authMiddleware, async (req, res) => {
+app.post('/proxy/elevenlabs/:voiceId', async (req, res) => {
+  // Simple check — just verify the request has our admin password header
+  // This avoids session token issues while still preventing abuse
+  const token = req.headers['x-session-token'];
+  const pw = req.headers['x-password'];
+  const isValid = (token && SESSION_STORE.has(token)) ||
+                  (token && isStatelessToken(token)) ||
+                  (pw && pw === ADMIN_PASSWORD);
+  if(!isValid) { return res.status(401).json({ error: 'Not authenticated' }); }
+
   try {
     const resp = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${req.params.voiceId}`, {
       method: 'POST',
