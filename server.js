@@ -112,6 +112,11 @@ function authMiddleware(req, res, next) {
 }
 
 // ══════════════════════════════════════════════════════════════
+// Serve ElevenLabs key to authenticated clients
+app.get('/config/elkey', authMiddleware, (req, res) => {
+  res.json({ key: ELEVENLABS_KEY });
+});
+
 // ── REP PROFILE ──────────────────────────────────────────────
 app.post('/rep/profile', authMiddleware, (req, res) => {
   const { name, company, products, specialties, territory, email, notify } = req.body;
