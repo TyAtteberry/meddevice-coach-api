@@ -476,7 +476,40 @@ app.post('/proxy/elevenlabs/:voiceId', async (req, res) => {
     res.status(500).json({ error: e.message });
   }
 });
+// ── TTS PROXY (ElevenLabs) ────────────────────────────────────
+app.post('/proxy/tts', authenticate, async (req, res) => {
+  const { text, voiceId } = req.body;
+  if (!text || !voiceId) return res.status(400).json({ error: 'text and voiceId required' });
 
+  try {
+    const response = await fetch(
+      `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'xi-api-key': ELEVENLABS_KEY,
+        },
+        body: JSON.stringify({
+          text,
+          model_id: 'eleven_monolingual_v1',
+          voice_settings: { stability: 0.5, similarity_boost: 0.75 },
+        }),
+      }
+    );
+
+    if (!response.ok) {
+      const err = await response.text();
+      return res.status(response.status).json({ error: err });
+    }
+
+    const audioBuffer = await response.arrayBuffer();
+    res.set('Content-Type', 'audio/mpeg');
+    res.send(Buffer.from(audioBuffer));
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
 // ══════════════════════════════════════════════════════════════
 // HELPERS
 // ══════════════════════════════════════════════════════════════
