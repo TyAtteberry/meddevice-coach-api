@@ -459,7 +459,7 @@ app.post('/proxy/claude', authMiddleware, async (req, res) => {
 });
 
 // ── TTS PROXY — routes ElevenLabs through server (fixes CORS/401) ──
-app.post('/proxy/tts', authMiddleware, async (req, res) => {
+app.post('/proxy/tts', async (req, res) => {
   const { text, voiceId } = req.body;
   if(!text || !voiceId) return res.status(400).json({ error: 'text and voiceId required' });
   try {
