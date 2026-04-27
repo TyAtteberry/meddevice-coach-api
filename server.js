@@ -2479,7 +2479,7 @@ function buildWelcomeEmail(name, products) {
   <tr><td style="background:#ffffff;padding:40px;">
     <p style="font-size:16px;color:#1a1a2e;margin:0 0 16px;">Hi ${firstName},</p>
     <p style="font-size:15px;color:#333;line-height:1.7;margin:0 0 16px;">You're here because you want to be the best. Not just good — the best. The rep who walks into every call prepared, who understands their own wiring, who practices when no one is watching, and who wins because they outworked and out-thought everyone in their territory.</p>
-    <p style="font-size:15px;color:#333;line-height:1.7;margin:0 0 16px;">That's exactly who I built this for. I spent 20+ years leading medical device sales teams and watching talented reps plateau — not because they lacked ability, but because no one ever coached them the way they were actually wired. MedDeviceSalesPro is the tool I wish every one of them had.</p>
+    <p style="font-size:15px;color:#333;line-height:1.7;margin:0 0 16px;">That's exactly who I built this for. I spent nearly 30 years leading medical device sales teams and watching talented reps plateau — not because they lacked ability, but because no one ever coached them the way they were actually wired. MedDeviceSalesPro is the tool I wish every one of them had.</p>
     <p style="font-size:15px;color:#333;line-height:1.7;margin:0 0 16px;">This platform will challenge you to invest in yourself — your skills, your self-awareness, your preparation. That investment compounds. The reps who do the work here show up to every call differently than the ones who don't.</p>
     <p style="font-size:15px;color:#333;line-height:1.7;margin:0 0 24px;">Here's how to get started — and I'd encourage you to take each step seriously:</p>
     ${productLine}
@@ -2492,9 +2492,11 @@ function buildWelcomeEmail(name, products) {
       </td>
       <td style="padding-left:12px;">
         <p style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 4px;">Take Your ProScan Assessment</p>
-        <p style="font-size:14px;color:#555;line-height:1.6;margin:0;">This is the most important first step. ProScan tells the AI how you're wired — your dominant traits, how you perform under stress, and where your blind spots are. Every coaching session becomes personalized to <em>you</em>, not a generic rep. And here's the best part: <strong>you own this data forever</strong>, even if you ever cancel.</p>
+        <p style="font-size:14px;color:#555;line-height:1.6;margin:0 0 8px;">This is the most important first step. ProScan tells the AI how you're wired — your dominant traits, how you perform under stress, and where your blind spots are. Every coaching session becomes personalized to <em>you</em>, not a generic rep.</p>
+        <p style="font-size:14px;color:#555;line-height:1.6;margin:0 0 8px;">The scan plus a certified-coach debrief typically runs $495 elsewhere. With MedDeviceSalesPro, the assessment is included and your debrief lives inside the AI coach — which has your profile, your accounts, and your full coaching history in context every time you talk to it. <strong>You own this data forever</strong>, even if you ever cancel.</p>
+        <p style="font-size:14px;color:#555;line-height:1.6;margin:0 0 8px;"><strong>How to do it well:</strong> The scan itself only takes about 10 minutes. Don't overthink it — answer as if you were at work, not how you wish you were or how you are at home. The assessment is most accurate when you go with your gut.</p>
+        <p style="font-size:14px;color:#555;line-height:1.6;margin:0 0 8px;">Once you receive your ProScan PDF, upload it from your profile settings — then block off 30–45 minutes for the debrief inside the platform. Treat that debrief like a real coaching session, not a checkbox. Every piece of coaching the app gives you from then on is built on what surfaces in it.</p>
         <p style="margin:8px 0 0;"><a href="https://www.pdp.guru" style="color:#00c9a7;font-weight:600;">Take your ProScan →</a></p>
-        <p style="font-size:13px;color:#888;margin:4px 0 0;">Once complete, upload your PDF from your profile settings.</p>
       </td>
     </tr>
     </table>
@@ -2546,7 +2548,7 @@ function buildWelcomeEmail(name, products) {
       </td>
       <td style="padding-left:12px;">
         <p style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 4px;">Invite Your Team</p>
-        <p style="font-size:14px;color:#555;line-height:1.6;margin:0;">Once you're getting value, share it. Create a team workspace and invite colleagues — the Field Intelligence becomes shared, objection responses get crowdsourced, and the whole team gets sharper together. The best teams learn from each other. Conceromed makes that systematic.</p>
+        <p style="font-size:14px;color:#555;line-height:1.6;margin:0;">Once you're getting value, share it. Create a team workspace and invite colleagues — the Field Intelligence becomes shared, objection responses get crowdsourced, and the whole team gets sharper together. The best teams learn from each other. MedDeviceSalesPro makes that systematic.</p>
       </td>
     </tr>
     </table>
@@ -2560,7 +2562,8 @@ function buildWelcomeEmail(name, products) {
 
     <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 16px;padding-top:20px;border-top:1px solid #eee;">The reps who get the most out of this platform are the ones who treat it like a serious investment in their career — not a tool they set up and forget. Take the ProScan. Set real goals. Load your intelligence. Practice the calls that make you uncomfortable.</p>
     <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 24px;">That's what separates the reps who plateau from the ones who keep climbing.</p>
-    <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 24px;">Reply to this email anytime — you'll reach me directly. I want to know how it's working for you and what would make it better.</p>
+    <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 16px;"><strong>One more thing.</strong> There's a feedback button in the top right of every screen in the app. Use it any time you spot something broken, find something confusing, or have an idea. I read every single one of them. Your feedback is what makes this the best version of itself.</p>
+    <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 24px;">You can also reply to this email anytime — you'll reach me directly. I want to know how it's working for you and what would make it better.</p>
     <p style="font-size:15px;color:#333;margin:0;">— Ty Atteberry<br><span style="color:#888;font-size:13px;">Founder, Conceromed</span><br><span style="color:#aaa;font-size:12px;font-style:italic;">Nearly 30 years in medical device sales · Medtronic, Abbott &amp; startups bringing new technologies to market</span></p>
   </td></tr>
 
@@ -2576,6 +2579,7 @@ function buildWelcomeEmail(name, products) {
 </body>
 </html>`;
 }
+
 
 // POST /rep/welcome-email — send welcome email after first profile save
 app.post('/rep/welcome-email', authMiddleware, async (req, res) => {
